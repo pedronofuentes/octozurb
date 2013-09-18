@@ -1,10 +1,14 @@
+@import "fonts";
+
+$site-heading: "ChunkFive", "PT Serif", Georgia, Times, serif;
+
 $blockquote: $type-border !default;
 $sans: "PT Sans", "Helvetica Neue", Arial, sans-serif !default;
-$serif: "PT Serif", Georgia, Times, "Times New Roman", serif !default;
+$serif: "Vollkorn", "PT Serif", Georgia, Times, "Times New Roman", serif !default;
 $mono: Menlo, Monaco, "Andale Mono", "lucida console", "Courier New", monospace !default;
-$heading-font-family: "PT Serif", "Georgia", "Helvetica Neue", Arial, sans-serif !default;
-$header-title-font-family: $heading-font-family !default;
-$header-subtitle-font-family: $heading-font-family !default;
+$heading-font-family: "Vollkorn", "PT Serif", "Georgia", "Helvetica Neue", Arial, sans-serif !default;
+$header-title-font-family: "ChunkFive", $heading-font-family !default;
+$header-subtitle-font-family: "Vollkorn", $heading-font-family !default;
 
 // Fonts
 .heading {
@@ -19,11 +23,19 @@ body > header h1 {
   @extend .heading;
   font-family: $header-title-font-family;
   font-weight: normal;
-  line-height: 1.2em;
-  margin-bottom: 0.6667em;
+  line-height: 1em;
+  margin-bottom: 0;
+  @media #{$small} {
+    font-size: 3.4em;
+  }
 }
 body > header h2 {
+  font-size: 1.4em;
   font-family: $header-subtitle-font-family;
+  font-weight: normal;
+  @media #{$small} {
+    padding-left: 3em;
+  }
 }
 
 body {
@@ -36,10 +48,10 @@ h1 {
   line-height: 1.2em;
 }
 
-@media only screen and (min-width: 992px) {
-  body { font-size: 1.15em; }
-  h1 { font-size: 2.6em; line-height: 1.2em; }
-}
+// @media only screen and (min-width: 992px) {
+//   body { font-size: 1.15em; }
+//   h1 { font-size: 2.6em; line-height: 1.2em; }
+// }
 
 #{headings()}{
   @extend .heading;
@@ -161,4 +173,3 @@ article blockquote {
   white-space: pre-wrap;
   word-wrap: break-word;
 }
-
