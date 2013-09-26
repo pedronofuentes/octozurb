@@ -9,6 +9,7 @@ $mono: Menlo, Monaco, "Andale Mono", "lucida console", "Courier New", monospace 
 $heading-font-family: "Vollkorn", "PT Serif", "Georgia", "Helvetica Neue", Arial, sans-serif !default;
 $header-title-font-family: "ChunkFive", $heading-font-family !default;
 $header-subtitle-font-family: "Vollkorn", $heading-font-family !default;
+$navigation-font-family: "Oswald", $sans !default;
 
 // Fonts
 .heading {
@@ -18,13 +19,16 @@ $header-subtitle-font-family: "Vollkorn", $heading-font-family !default;
 .serif { font-family: $serif; }
 .mono { font-family: $mono; }
 
+html, body {
+  font-size: 18px;
+}
+
 body > header h1 {
   font-size: 2.2em;
   @extend .heading;
   font-family: $header-title-font-family;
   font-weight: normal;
   line-height: 1em;
-  margin-bottom: 0;
   @media #{$small} {
     font-size: 3.4em;
   }
@@ -44,8 +48,12 @@ body {
   @extend .serif;
 }
 h1 {
-  font-size: 2.2em;
-  line-height: 1.2em;
+  font-size: 1.6em;
+  line-height: 1em;
+  @media #{$small} {
+    font-size: 2.2em;
+    line-height: 1.2em;
+  }
 }
 
 // @media only screen and (min-width: 992px) {
@@ -172,4 +180,32 @@ article blockquote {
   white-space: -o-pre-wrap;
   white-space: pre-wrap;
   word-wrap: break-word;
+}
+
+.main-navigation {
+  font-family: $navigation-font-family;
+  font-size: 1.6em;
+  margin-left: 0;
+  > li {
+    margin-left: 0;
+    margin-right: 0.8em;
+  }
+  @media #{$small} {
+    font-size: 2em;
+  }
+}
+
+.social {
+  .symbol {
+    font-size: 3em;
+    &.twitter {
+      @include link-colors($text-color-light, $twitter-color, $text-color-light, $text-color-light, $text-color-light);
+    }
+    &.github {
+      @include link-colors($text-color-light, $github-color, $text-color-light, $text-color-light, $text-color-light);
+    }
+    &.googleplus {
+      @include link-colors($text-color-light, $googleplus-color, $text-color-light, $text-color-light, $text-color-light);
+    }
+  }
 }

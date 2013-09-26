@@ -1,8 +1,9 @@
 $noise-bg: image-url('noise.png') top left !default;
 $img-border: inline-image('dotted-border.png') !default;
+$rojo: #dc4a4a;
 
 // Main Link Colors
-$link-color: #dc4a4a !default;
+$link-color: $rojo !default;
 $link-color-hover: $link-color !default;
 $link-color-visited: $link-color !default;
 $link-color-active: $link-color !default;
@@ -20,6 +21,11 @@ $subtitle-color: #aaa !default;
 $text-color: #222 !default;
 $text-color-light: #aaa !default;
 $type-border: #ddd !default;
+
+/* Social colors */
+$twitter-color: #00aced;
+$github-color: #171515;
+$googleplus-color: #df4a32;
 
 /* Navigation */
 $nav-bg: #ccc !default;
@@ -68,6 +74,22 @@ aside.sidebar a {
 }
 a {
   @include transition(color .3s);
+}
+
+.main-navigation a {
+  @include link-colors($text-color, $hover: $link-color, $focus: $link-color, $visited: $text-color, $active: $link-color);
+}
+
+/* Post icons */
+$images-path: "/images/";
+$extension: ".svg";
+
+.vcard {
+  border: 0;
+
+  article & {
+    padding-left: 0;
+  }
 }
 
 // html {

@@ -220,7 +220,7 @@ figure.code {
   background: none;
   padding: 0;
   border: 0;
-  margin-bottom: 1.5em;
+  margin: 0 0 1.5em 0;
   pre { margin-bottom: 0; }
   figcaption {
     position: relative;
@@ -258,4 +258,14 @@ figure.code {
   font-size: 13px;
   text-shadow: #cbcccc 0 1px 0;
   padding-left: 3em;
+}
+
+.code table {
+  margin-bottom: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 0;
+  tr td {
+    padding: 0;
+  }
 }
