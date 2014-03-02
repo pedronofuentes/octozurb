@@ -32,3 +32,6 @@ Icon
 
 # Bower
 bower_components
+
+# Node packages
+node_modules
