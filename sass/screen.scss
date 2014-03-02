@@ -1,7 +1,10 @@
 @import "compass";
 @include global-reset;
 
+@import "vendor/foundation/normalize";
 @import "vendor/foundation/foundation";
+
+@import "settings";
 
 @import "custom/colors";
 @import "custom/fonts";
