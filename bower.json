@@ -1,0 +1,19 @@
+{
+  "name": "octozurb",
+  "version": "0.1.0",
+  "homepage": "https://github.com/pedronofuentes/octozurb",
+  "authors": [
+    "Pedro Nofuentes <pedro.nofuentes@gmail.com>"
+  ],
+  "description": "An Octopress theme with Foundation 5",
+  "keywords": [
+    "octopress",
+    "foundation",
+    "theme"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "foundation": "zurb/bower-foundation#~5.1.1"
+  }
+}
