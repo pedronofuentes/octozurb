@@ -4,6 +4,7 @@
     <li><a href="{{ site.subscribe_email }}" rel="subscribe-email" title="subscribe via email">Email</a></li>
   {% endif %}
 </ul>
+{% include custom/navigation.html %}
   {% if site.simple_search %}
 <form action="{{ site.simple_search }}" method="get">
   <fieldset role="search">
@@ -12,4 +13,3 @@
   </fieldset>
 </form>
   {% endif %}
-{% include custom/navigation.html %}

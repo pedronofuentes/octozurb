@@ -2,9 +2,10 @@
 @include global-reset;
 
 @import "vendor/foundation/normalize";
-@import "vendor/foundation/foundation";
 
 @import "settings";
+
+@import "vendor/foundation/foundation";
 
 @import "custom/colors";
 @import "custom/fonts";

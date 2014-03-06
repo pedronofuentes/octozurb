@@ -1,0 +1,36 @@
+.topbar {
+  @extend .hide-for-large-up;
+}
+
+#header {
+  @extend .show-for-large-up;
+  @include grid-column(12);
+
+  @media #{$large-up} {
+    @include grid-column(4);
+  }
+}
+
+#main {
+  @include grid-column(12);
+
+  @media #{$medium-only} {
+    @include grid-column($columns:10, $offset:1);
+  }
+
+  @media #{$large-up} {
+    @include grid-column(8);
+  }
+}
+
+#footer {
+  @include grid-column(12);
+}
+
+.sidebar {
+  @include grid-row();
+
+  > section {
+    @include grid-column(6);
+  }
+}

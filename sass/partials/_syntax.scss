@@ -259,3 +259,15 @@ figure.code {
   text-shadow: #cbcccc 0 1px 0;
   padding-left: 3em;
 }
+
+.code table {
+  margin-bottom: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 0;
+
+  tr td {
+    padding: 0;
+  }
+}
+
