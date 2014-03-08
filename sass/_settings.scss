@@ -37,8 +37,8 @@
 
 // We use these to control various global styles
 // $body-bg: #fff;
-// $body-font-color: #222;
-// $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$body-font-color: #222;
+$body-font-family: $serif;
 // $body-font-weight: normal;
 // $body-font-style: normal;
 
@@ -51,7 +51,7 @@
 // $default-float: left;
 
 // We use these as default colors throughout
-// $primary-color: #008CBA;
+$primary-color: #dc4a4a;
 // $secondary-color: #e7e7e7;
 // $alert-color: #f04124;
 // $success-color: #43AC6A;
@@ -113,8 +113,8 @@ $medium-range: (40.063em, 64em);
 // $include-html-type-classes: $include-html-classes;
 
 // We use these to control header font styles
-// $header-font-family: $body-font-family;
-// $header-font-weight: 300;
+$header-font-family: $serif;
+$header-font-weight: 700;
 // $header-font-style: normal;
 // $header-font-color: #222;
 // $header-line-height: 1.4;
@@ -497,10 +497,10 @@ $medium-range: (40.063em, 64em);
 
 // We use these to style the fieldset border and spacing.
 // $fieldset-border-style: solid;
-// $fieldset-border-width: 1px;
+$fieldset-border-width: 0;
 // $fieldset-border-color: #ddd;
-// $fieldset-padding: rem-calc(20);
-// $fieldset-margin: rem-calc(18 0);
+$fieldset-padding: 0;
+$fieldset-margin: rem-calc(18 0);
 
 // We use these to style the legends when you use them
 // $legend-bg: #fff;
@@ -900,12 +900,12 @@ $medium-range: (40.063em, 64em);
 // $side-nav-list-margin: rem-calc(0 0 7 0);
 
 // We use these to control link styles.
-// $side-nav-link-color: $primary-color;
-// $side-nav-link-color-active: scale-color($side-nav-link-color, $lightness: 30%);
-// $side-nav-link-color-hover: scale-color($side-nav-link-color, $lightness: 30%);
+$side-nav-link-color: $body-font-color;
+$side-nav-link-color-active: $primary-color;
+$side-nav-link-color-hover: $primary-color;
 // $side-nav-font-size: rem-calc(14);
 // $side-nav-font-weight: normal;
-// $side-nav-font-family: $body-font-family;
+$side-nav-font-family: $nav-font-family;
 // $side-nav-active-font-family: $side-nav-font-family;
 
 
@@ -1123,7 +1123,7 @@ $medium-range: (40.063em, 64em);
 // $include-html-top-bar-classes: $include-html-classes;
 
 // Background color for the top bar
-// $topbar-bg-color: #333;
+$topbar-bg-color: #ccc;
 // $topbar-bg: $topbar-bg-color;
 
 // Height and margin
@@ -1135,8 +1135,8 @@ $medium-range: (40.063em, 64em);
 // $topbar-title-font-size: rem-calc(17);
 
 // Style the top bar dropdown elements
-// $topbar-dropdown-bg: #333;
-// $topbar-dropdown-link-color: #fff;
+$topbar-dropdown-bg: darken($topbar-bg-color, 20%);
+$topbar-dropdown-link-color: $primary-color;
 // $topbar-dropdown-link-bg: #333;
 // $topbar-dropdown-link-weight: normal;
 // $topbar-dropdown-toggle-size: 5px;
@@ -1149,12 +1149,12 @@ $medium-range: (40.063em, 64em);
 // $topbar-link-color-active: #fff;
 // $topbar-link-color-active-hover: #fff;
 // $topbar-link-weight: normal;
-// $topbar-link-font-size: rem-calc(13);
+$topbar-link-font-size: rem-calc(16);
 // $topbar-link-hover-lightness: -10%; // Darken by 10%
-// $topbar-link-bg-hover: #272727  ;
+$topbar-link-bg-hover: $primary-color;
 // $topbar-link-bg-active: $primary-color;
 // $topbar-link-bg-active-hover: scale-color($primary-color, $lightness: -14%);
-// $topbar-link-font-family: $body-font-family;
+$topbar-link-font-family: $nav-font-family;
 
 // $topbar-button-font-size: 0.75rem;
 

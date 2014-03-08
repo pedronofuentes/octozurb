@@ -1,2 +1,25 @@
 // This File is imported last, and will override other styles in the cascade
 // Add styles here to make changes without digging in too much
+
+.top-bar .name h1.site-title {
+  a {
+    color: $primary-color;
+  }
+}
+
+.site-subtitle {
+  font-size: 1.4rem;
+  font-weight: normal;
+}
+
+$side-nav-link-color: $body-font-color;
+$side-nav-link-color-active: $primary-color;
+$side-nav-list-margin: 0;
+
+#header .main-navigation {
+  @include side-nav($font-size:2rem);
+
+  border-style: solid;
+  border-color: $body-font-color;
+  border-width: 1px 0;
+}
