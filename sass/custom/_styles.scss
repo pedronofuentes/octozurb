@@ -23,3 +23,10 @@ $side-nav-list-margin: 0;
   border-color: $body-font-color;
   border-width: 1px 0;
 }
+
+.blog-index {
+  article + article {
+    padding-top: 2rem;
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAABCAYAAACsXeyTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAFUlEQVQIHWNIS0sr/v//PwMMDzY+ADqMahlW4J91AAAAAElFTkSuQmCC') top left repeat-x;
+  }
+}
