@@ -21,6 +21,18 @@ module.exports = function(grunt) {
         cwd: 'bower_components/fastclick/lib/',
         src: 'fastclick.js',
         dest: 'source/javascripts/libs/'
+      },
+      fontawesome: {
+        scss: {
+          cwd: 'bower_components/fontawesome/scss/',
+          src: '**',
+          dest: 'sass/vendor/fontawesome'
+        },
+        fonts: {
+          cwd: 'bower_components/fontawesome/fonts/',
+          src: '**',
+          dest: 'source/fonts'
+        }
       }
     },
     copy: {
@@ -35,6 +47,18 @@ module.exports = function(grunt) {
         cwd: '<%= vendor.fastclick.cwd %>',
         src: '<%= vendor.fastclick.src %>',
         dest: '<%= vendor.fastclick.dest %>'
+      },
+      "fontawesome-scss": {
+        expand: true,
+        cwd: '<%= vendor.fontawesome.scss.cwd %>',
+        src: '<%= vendor.fontawesome.scss.src %>',
+        dest: '<%= vendor.fontawesome.scss.dest %>'
+      },
+      "fontawesome-fonts": {
+        expand: true,
+        cwd: '<%= vendor.fontawesome.fonts.cwd %>',
+        src: '<%= vendor.fontawesome.fonts.src %>',
+        dest: '<%= vendor.fontawesome.fonts.dest %>'
       }
     },
     uglify: {

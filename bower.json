@@ -14,6 +14,7 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "foundation": "zurb/bower-foundation#~5.1.1"
+    "foundation": "zurb/bower-foundation#~5.1.1",
+    "fontawesome": "~4.0.3"
   }
 }
