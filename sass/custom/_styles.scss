@@ -24,9 +24,41 @@ $side-nav-list-margin: 0;
   border-width: 1px 0;
 }
 
-.blog-index {
+.blog-index,
+#blog-archives {
   article + article {
     padding-top: 2rem;
     background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAABCAYAAACsXeyTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAFUlEQVQIHWNIS0sr/v//PwMMDzY+ADqMahlW4J91AAAAAElFTkSuQmCC') top left repeat-x;
   }
+}
+
+article {
+  header {
+    .meta {
+      margin-bottom: 0;
+      line-height: 1rem;
+    }
+  }
+
+  .meta {
+    margin-top: 1rem;
+    color: $gray-color;
+  }
+
+  .post-navitagion {
+    font-family: $sans;
+  }
+  
+  .byline + time:before, time +time:before, .comments:before, .byline ~ .categories:before {
+    @extend .separator;
+  }
+}
+
+.vcard {
+  padding: 0;
+  border: none;
+}
+
+ul {
+  @extend .disc;
 }
