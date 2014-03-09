@@ -22,7 +22,6 @@
 
 .top-bar {
   @extend .hide-for-large-up;
-  @extend .fixed;
 }
 
 #header {
@@ -43,6 +42,11 @@
 
   @media #{$large-up} {
     @include grid-column(8);
+  }
+
+  .social {
+    @extend .hide-for-large-up;
+    text-align: right;
   }
 }
 

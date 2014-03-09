@@ -5,9 +5,11 @@
   <div class="row">
     <div id="header">
       <header role="banner">{% include header.html %}</header>
+      {% include custom/social.html %}
       <nav role="navigation">{% include navigation.html %}</nav>
     </div>
     <div id="main">
+      {% include custom/social.html %}
       <div id="content">
         {{ content | expand_urls: root_url }}
       </div>
