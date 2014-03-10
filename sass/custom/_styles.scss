@@ -26,6 +26,10 @@ $side-nav-list-margin: 0;
 
 .blog-index,
 #blog-archives {
+  article {
+    margin-bottom: 1em;
+  }
+
   article + article {
     padding-top: 2rem;
     background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAABCAYAAACsXeyTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAFUlEQVQIHWNIS0sr/v//PwMMDzY+ADqMahlW4J91AAAAAElFTkSuQmCC') top left repeat-x;
@@ -51,6 +55,15 @@ article {
   
   .byline + time:before, time +time:before, .comments:before, .byline ~ .categories:before {
     @extend .separator;
+  }
+
+  .main-image {
+    margin-bottom: 1em;
+  }
+
+  img.main-image {
+    margin-bottom: .8em;
+    margin-left: 1.5em;
   }
 }
 
