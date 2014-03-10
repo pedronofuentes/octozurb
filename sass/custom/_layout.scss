@@ -52,6 +52,8 @@
 
 #footer {
   @include grid-column(12);
+
+  margin-top: 2em;
 }
 
 .sidebar {

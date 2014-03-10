@@ -1,4 +1,6 @@
 .sidebar {
+  margin-top: 2em;
+
   h1 { font-size: $h1-font-size - rem-calc(15); }
   h2 { font-size: $h2-font-size - rem-calc(15); }
   h3 { font-size: $h3-font-size - rem-calc(10); }
