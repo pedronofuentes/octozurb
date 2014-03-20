@@ -2,6 +2,7 @@ module.exports = function(grunt) {
   'use strict';
 
   grunt.initConfig({
+    pkg: grunt.file.readJSON('package.json'),
     vendor: {
       foundation: {
         sass: {
@@ -70,11 +71,28 @@ module.exports = function(grunt) {
           '<%= vendor.foundation.js.dest %>': '<%= vendor.foundation.js.src %>'
         }
       }
+    },
+    compress: {
+      dist: {
+        options: {
+          archive: 'dist/octozurb-v<%= pkg.version %>.zip',
+          mode: 'zip'
+        },
+        expand: true,
+        src: [
+          'sass/**/*',
+          'source/**/*',
+          '*.md'
+        ],
+        dest: 'octozurb'
+      }
     }
   });
 
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-compress');
 
   grunt.registerTask('default', ['copy', 'uglify']);
+  grunt.registerTask('dist', ['copy', 'uglify', 'compress']);
 }
